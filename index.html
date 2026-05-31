@@ -5,45 +5,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Sadanand Shinde | Portfolio</title>
-
   <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-
   <nav>
-
     <h1>SADANAND SHINDE.</h1>
 
-    <div class="nav-links">
-      <a href="#about">ABOUT</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#contact">CONTACT</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" onclick="closeMenu()">ABOUT</a>
+      <a href="#projects" onclick="closeMenu()">PROJECTS</a>
+      <a href="#skills" onclick="closeMenu()">SKILLS</a>
+      <a href="#contact" onclick="closeMenu()">CONTACT</a>
     </div>
 
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
 
 
   <!-- HERO SECTION -->
-
   <section class="hero">
 
     <div class="hero-content">
 
-      <p class="small-text">
-        INFORMATION TECHNOLOGY STUDENT
-      </p>
+      <p class="small-text">INFORMATION TECHNOLOGY STUDENT</p>
 
       <h1>
         BUILDING <br>
@@ -59,49 +55,32 @@
       </p>
 
       <div class="hero-buttons">
-
-        <button>
-          VIEW PROJECTS
-        </button>
-
-       <a href="resume.pdf" download class="outline-btn">
-        DOWNLOAD CV
-       </a>
-
+        <a href="#projects" class="primary-btn">VIEW PROJECTS</a>
+        <a href="resume.pdf" download class="outline-btn">DOWNLOAD CV</a>
       </div>
 
-
       <!-- STATS -->
-
       <div class="hero-stats">
-
         <div>
           <h2>7.99</h2>
           <p>Current CGPA</p>
         </div>
-
         <div>
           <h2>2027</h2>
           <p>Graduation Year</p>
         </div>
-
         <div>
           <h2>10+</h2>
           <p>Technical Skills</p>
         </div>
-
       </div>
 
     </div>
 
-
-
     <!-- IMAGE -->
-
     <div class="hero-image">
-
-      <img src="photo.jpeg">
-
+      <img src="photo.jpeg" alt="Sadanand Shinde"
+        onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Sadanand+Shinde&size=420&background=111827&color=7dd3fc&font-size=0.35&bold=true'">
     </div>
 
   </section>
@@ -109,62 +88,31 @@
 
 
   <!-- PROFILE -->
-
   <section class="profile">
 
     <div class="section-title">
-
       <p>PROFILE</p>
-
-      <h2>
-        Focused on creating modern
-        and practical technology solutions.
-      </h2>
-
+      <h2>Focused on creating modern and practical technology solutions.</h2>
     </div>
-
 
     <div class="profile-grid">
 
       <div class="profile-card">
-
         <span>PROGRAMMING</span>
-
         <h3>C++, Python, Java</h3>
-
-        <p>
-          Strong foundation in programming,
-          problem solving, and DSA concepts.
-        </p>
-
+        <p>Strong foundation in programming, problem solving, and DSA concepts.</p>
       </div>
 
-
       <div class="profile-card">
-
         <span>WEB DEVELOPMENT</span>
-
         <h3>Frontend Development</h3>
-
-        <p>
-          Building responsive interfaces using
-          HTML, CSS, and JavaScript.
-        </p>
-
+        <p>Building responsive interfaces using HTML, CSS, and JavaScript.</p>
       </div>
 
-
       <div class="profile-card">
-
         <span>DATABASES</span>
-
         <h3>MongoDB & SQL</h3>
-
-        <p>
-          Knowledge of relational databases,
-          query management, and backend basics.
-        </p>
-
+        <p>Knowledge of relational databases, query management, and backend basics.</p>
       </div>
 
     </div>
@@ -173,58 +121,54 @@
 
 
 
-  <!-- PROJECT -->
-
+  <!-- PROJECTS -->
   <section class="projects" id="projects">
 
     <div class="section-title">
-
-      <p>FEATURED PROJECT</p>
-
-      <h2>
-        Producer To Consumer
-        Agricultural Marketplace
-      </h2>
-
+      <p>FEATURED PROJECTS</p>
+      <h2>Projects Built With Purpose.</h2>
     </div>
 
-
+    <!-- PROJECT 01 -->
     <div class="project-box">
-
-      <div class="project-image"></div>
-
-
+      <div class="project-image project-image-crm"></div>
       <div class="project-content">
-
         <span>01</span>
-
-        <h3>
-          Agricultural Marketplace Platform
-        </h3>
-
+        <h3>Shopify CRM Dashboard</h3>
         <p>
-          Developed a direct farmer-to-consumer
-          marketplace platform using HTML,
-          CSS, JavaScript, and MongoDB.
+          Built a full-featured CRM dashboard for Shopify store owners,
+          enabling customer insights, order tracking, and sales analytics
+          through a clean and responsive interface.
         </p>
-
-
         <div class="stack">
-
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JAVASCRIPT</div>
+          <div>REACT</div>
+          <div>SHOPIFY API</div>
+          <div>NODE.JS</div>
           <div>MONGODB</div>
-
         </div>
-
-
-        <button>
-          VIEW PROJECT
-        </button>
-
+        <a href="https://github.com/sadanandshinde" target="_blank" class="project-btn">VIEW ON GITHUB</a>
       </div>
+    </div>
 
+    <!-- PROJECT 02 -->
+    <div class="project-box" style="margin-top:30px;">
+      <div class="project-image project-image-dsa"></div>
+      <div class="project-content">
+        <span>02</span>
+        <h3>AI DSA Mentor</h3>
+        <p>
+          Developed an AI-powered mentor platform that helps students learn
+          Data Structures and Algorithms through guided explanations,
+          hints, and step-by-step problem solving.
+        </p>
+        <div class="stack">
+          <div>PYTHON</div>
+          <div>OPENAI API</div>
+          <div>JAVASCRIPT</div>
+          <div>FLASK</div>
+        </div>
+        <a href="https://github.com/sadanandshinde" target="_blank" class="project-btn">VIEW ON GITHUB</a>
+      </div>
     </div>
 
   </section>
@@ -232,23 +176,62 @@
 
 
   <!-- SKILLS -->
-
   <section class="skills" id="skills">
 
     <div class="section-title">
-
       <p>SKILLS</p>
-
+      <h2>Technologies I Work With.</h2>
     </div>
 
+    <div class="skills-grid">
 
-    <div class="skills-text">
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">Python</span>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
 
-      <h2>PYTHON</h2>
-      <h2>JAVASCRIPT</h2>
-      <h2>AI</h2>
-      <h2>MONGODB</h2>
-      <h2>FULL STACK</h2>
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">C++ / DSA</span>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">HTML & CSS</span>
+          <span class="skill-level">Proficient</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">MongoDB</span>
+          <span class="skill-level">Beginner</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-header">
+          <span class="skill-name">AI / ML Basics</span>
+          <span class="skill-level">Beginner</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+      </div>
 
     </div>
 
@@ -257,146 +240,65 @@
 
 
   <!-- CERTIFICATIONS -->
-
   <section class="certifications">
 
     <div class="section-title">
-
       <p>CERTIFICATIONS</p>
-
-      <h2>
-        Learning & Technical Certifications
-      </h2>
-
+      <h2>Learning & Technical Certifications</h2>
     </div>
-
 
     <div class="certification-grid">
-         <!-- JAVA -->
 
-    <div class="certification-card">
+      <div class="certification-card">
+        <span>NPTEL</span>
+        <h3>Programming in Java</h3>
+        <p>Successfully completed NPTEL Programming in Java certification offered by IIT Kharagpur focused on Java programming, OOP concepts, and problem solving.</p>
+      </div>
 
-      <span>NPTEL</span>
+      <div class="certification-card">
+        <span>NPTEL</span>
+        <h3>Python for Data Science</h3>
+        <p>Successfully completed NPTEL Python for Data Science certification focused on Python programming, data analysis, visualization, and machine learning basics.</p>
+      </div>
 
-      <h3>
-        Programming in Java
-      </h3>
+      <div class="certification-card">
+        <span>CISCO</span>
+        <h3>Operating Systems Basics</h3>
+        <p>Successfully completed Cisco Operating Systems Basics certification focused on computer hardware, operating systems fundamentals, and system management concepts.</p>
+      </div>
 
-      <p>
-        Successfully completed NPTEL Programming in Java
-        certification offered by IIT Kharagpur focused on
-        Java programming, OOP concepts, and problem solving.
-      </p>
+      <div class="certification-card">
+        <span>IoT</span>
+        <h3>Digital Transformation</h3>
+        <p>Successfully completed Introduction to IoT and Digital Transformation certification focused on smart technologies, IoT applications, and modern digital transformation concepts.</p>
+      </div>
 
     </div>
 
-     <!-- PYTHON -->
-
-<div class="certification-card">
-
-  <span>NPTEL</span>
-
-  <h3>
-    Python for Data Science
-  </h3>
-
-  <p>
-    Successfully completed NPTEL Python for Data Science
-    certification focused on Python programming,
-    data analysis, visualization, and machine learning basics.
-  </p>
-
-</div>
-
-
-     <!-- CISCO -->
-
-<div class="certification-card">
-
-  <span>CISCO</span>
-
-  <h3>
-    Operating Systems Basics
-  </h3>
-
-  <p>
-    Successfully completed Cisco Operating Systems Basics
-    certification focused on computer hardware,
-    operating systems fundamentals, and system management concepts.
-  </p>
-
-</div>
-
-
-
-<!-- IoT -->
-
-<div class="certification-card">
-
-  <span>IoT</span>
-
-  <h3>
-    Digital Transformation
-  </h3>
-
-  <p>
-    Successfully completed Introduction to IoT and Digital Transformation
-    certification focused on smart technologies,
-    IoT applications, and modern digital transformation concepts.
-  </p>
-
-</div>
   </section>
 
 
 
   <!-- ABOUT -->
-
   <section class="about" id="about">
 
     <div class="about-left">
-
       <p>ABOUT</p>
-
-      <h2>
-        Passionate about building
-        impactful digital products
-        with strong visual identity.
-      </h2>
-
+      <h2>Passionate about building impactful digital products with strong visual identity.</h2>
     </div>
-
 
     <div class="about-right">
 
       <div class="about-card">
-
         <span>EDUCATION</span>
-
-        <h3>
-          B.Tech Information Technology
-        </h3>
-
-        <p>
-          2023 - 2027
-        </p>
-
+        <h3>B.Tech Information Technology</h3>
+        <p>2023 - 2027</p>
       </div>
 
-
       <div class="about-card">
-
         <span>INTERESTS</span>
-
-        <h3>
-          AI, Web Development & IoT
-        </h3>
-
-        <p>
-          Building intelligent systems,
-          interfaces, and practical applications.
-        </p>
-
+        <h3>AI, Web Development & IoT</h3>
+        <p>Building intelligent systems, interfaces, and practical applications.</p>
       </div>
 
     </div>
@@ -406,40 +308,35 @@
 
 
   <!-- CONTACT -->
-
   <section class="contact" id="contact">
 
     <p>CONTACT</p>
-
-    <h2>
-      LET'S CREATE <br>
-      SOMETHING IMPACTFUL.
-    </h2>
-
+    <h2>LET'S CREATE <br> SOMETHING IMPACTFUL.</h2>
 
     <div class="contact-info">
 
       <div>
-
         <span>EMAIL</span>
-
-        <h3>
-          sadanandshinde633@gmail.com
-        </h3>
-
+        <h3><a href="mailto:sadanandshinde633@gmail.com">sadanandshinde633@gmail.com</a></h3>
       </div>
-
 
       <div>
-
         <span>PHONE</span>
-
-        <h3>
-          +91 7620589435
-        </h3>
-
+        <h3><a href="tel:+917620589435">+91 7620589435</a></h3>
       </div>
 
+    </div>
+
+    <!-- SOCIAL LINKS -->
+    <div class="social-links">
+      <a href="https://github.com/sadanandshinde" target="_blank" class="social-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GITHUB
+      </a>
+      <a href="https://linkedin.com/in/sadanandshinde" target="_blank" class="social-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LINKEDIN
+      </a>
     </div>
 
   </section>
@@ -447,12 +344,22 @@
 
 
   <!-- FOOTER -->
-
   <footer>
-
     © 2026 SADANAND SHINDE
-
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      const btn = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      btn.classList.toggle('active');
+    }
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('active');
+    }
+  </script>
 
 </body>
 </html>
